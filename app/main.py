@@ -9,6 +9,3 @@ def helloWorld():
 @app.route('/desitionTree')
 def getDecisionTree():
     return jsonify({'message':'Image desition tree'})
-
-if __name__ == '__main__':
-    app.run(debug=True,port=4000)
