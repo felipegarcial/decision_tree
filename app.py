@@ -12,15 +12,15 @@ def helloWorld():
 @app.route('/train')
 def train_model():
     return jsonify({
-        'message':'Arbol dibujado',
-        'url': d_tree.train_model()
+        'message':'Modelo entrenado',
+        'Accuracy': d_tree.train_model()
     })
 
 @app.route('/draw-tree')
 def draw_tree():
     return jsonify({
-        'message':'Modelo entrenado',
-        'Accuracy': d_tree.draw_tree()
+        'message':'Arbol dibujado',
+        'url': d_tree.draw_tree()
     })
 
 
