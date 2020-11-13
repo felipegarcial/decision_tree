@@ -1,7 +1,7 @@
 from flask import Flask,jsonify,request
-from model.tree import DesitionTree
+from model.tree import DecisionTree
 
-d_tree= DesitionTree()
+d_tree= DecisionTree()
 
 app = Flask(__name__)
 

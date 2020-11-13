@@ -1,4 +1,4 @@
-class DesitionTree:
+class DecisionTree:
     def __init__(self):
         print("Entro")
 
