@@ -9,6 +9,7 @@ def helloWorld():
 @app.route('/desitionTree')
 def getDecisionTree():
     return jsonify({'message':'Image desition tree'})
+@app.route('/desitionTree')
 
 
 if __name__ == '__main__':
