@@ -8,12 +8,29 @@ app = Flask(__name__)
 @app.route('/')
 def helloWorld():
     return jsonify({'message':'Hello world!'})
+
 @app.route('/train')
-def getDecisionTree():
-    return jsonify({'message':'Image desition tree'})
-@app.route('/classifier',methods=['POST'])
-def classifiedPacient():
-    return jsonify({'message':d_tree.classify_patient(request.json)})
+def train_model():
+    return jsonify({
+        'message':'Arbol dibujado',
+        'url': d_tree.train_model()
+    })
+
+@app.route('/draw-tree')
+def draw_tree():
+    return jsonify({
+        'message':'Modelo entrenado',
+        'Accuracy': d_tree.draw_tree()
+    })
+
+
+@app.route('/classify-patient',methods=['POST'])
+def classified_patient():
+    return jsonify({
+        'message':'Paciente clasificado',
+        'classified':d_tree.classify_patient(request.json)
+        
+    })
 
 if __name__ == '__main__':
     app.run(debug=True,port=4000,host='0.0.0.0')
