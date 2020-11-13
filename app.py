@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def helloWorld():
     return jsonify({'message':'Hello world!'})
-@app.route('/desitionTree')
+@app.route('/train')
 def getDecisionTree():
     return jsonify({'message':'Image desition tree'})
 @app.route('/classifier',methods=['POST'])
