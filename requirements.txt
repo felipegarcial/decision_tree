@@ -4,9 +4,8 @@ cycler==0.10.0
 dbus-python==1.2.16
 decorator==4.4.2
 Flask==1.1.2
+graphviz==0.14.2
 gunicorn==20.0.4
-ipython==7.19.0
-ipython-genutils==0.2.0
 itsdangerous==1.1.0
 jedi==0.17.2
 Jinja2==2.11.2
@@ -22,7 +21,6 @@ pickleshare==0.7.5
 Pillow==8.0.1
 prompt-toolkit==3.0.8
 ptyprocess==0.6.0
-pydotplus==2.0.2
 Pygments==2.7.2
 PyGObject==3.36.0
 pyparsing==2.4.7

@@ -7,8 +7,6 @@ from sklearn import tree
 
 
 class DecisionTree:
-
-    
     def __init__(self):
         self.tdc = tree.DecisionTreeClassifier()
         self.dt = pd.read_csv('data/heart.csv')
@@ -31,15 +29,16 @@ class DecisionTree:
         return(metrics.accuracy_score(y_test, y_pred))
 
     def draw_tree(self):
-        from io import StringIO 
-        from IPython.display import Image, display
-        import pydotplus
+        # from io import StringIO 
+        # from IPython.display import Image, display
+        # import pydotplus
 
-        out = StringIO()
-        tree.export_graphviz(self.tdc, out_file = out)
+        # out = StringIO()
+        # tree.export_graphviz(self.tdc, out_file = out)
 
-        graph = pydotplus.graph_from_dot_data(out.getvalue())
-        return(graph.write_png('tree.png'))
+        # graph = pydotplus.graph_from_dot_data(out.getvalue())
+        # return(graph.write_png('tree.png'))
+        pass
 
     def classify_patient(self,patientInfo):
         x_features_recieved = np.array([[patientInfo['age'],patientInfo['sex'],patientInfo['cp'],patientInfo['trestbps'],patientInfo['chol'],patientInfo['fbs'],patientInfo['restecg'],patientInfo['thalach'],patientInfo['oldpeak'],patientInfo['exang'],patientInfo['ca'],patientInfo['slope'],patientInfo['thal']]])
