@@ -9,6 +9,7 @@ class DecisionTree:
     def __init__(self):
         self.tdc = tree.DecisionTreeClassifier()
         self.dt = pd.read_csv('data/heart.csv')
+        self.train_model()
 
     def train_model(self):
         from sklearn.model_selection import train_test_split
